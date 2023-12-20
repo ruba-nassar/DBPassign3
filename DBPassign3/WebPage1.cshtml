@@ -1,0 +1,61 @@
+﻿
+@{
+
+    var result = "";
+    var totalmessage = "";
+    if (IsPost)
+    {
+        var fname = Request["text1"];
+        var lname = Request["text2"];
+        result = fname +lname;
+        totalmessage = "fullName :" + result;
+    }
+
+}
+<style>
+    /* Add your styles here */
+    input {
+        width: 300px; /* Set your desired width */
+        padding: 10px; /* Adjust padding as needed */
+        margin-bottom: 10px; /* Add margin to separate elements */
+    }
+    .total {
+        width: 300px; /* Set your desired width */
+        padding: 10px; /* Adjust padding as needed */
+        margin-bottom: 10px; /* Add margin to separate elements */
+    }
+    button {
+        padding: 10px; /* Adjust padding as needed */
+    }
+</style>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>concat app</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter your name</p>
+    <form method="post" action="">
+        <p>
+            <label  for="text1">first name</label>
+            <input type="text" name="text1" />
+        </p>
+        <p>
+            <label for="text2">lastName name</label>
+            <input type="text" name="text2" />
+        </p>
+        <p>
+            <input type="submit" value="concat" />
+        </p>
+        <p id="total">@totalmessage</p>
+    </form>
+
+</body>
+</html>
